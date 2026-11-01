@@ -2,8 +2,8 @@
   "name": "Voyage",
   "short_name": "Voyage",
   "display": "standalone",
-  "background_color": "#060913",
-  "theme_color": "#060913",
+  "background_color": "#090E12",
+  "theme_color": "#090E12",
   "start_url": "./",
   "scope": "./",
   "icons": [

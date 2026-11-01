@@ -4,17 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
     <title>Voyage</title>
-    <meta name="theme-color" content="#060913" />
+    <meta name="theme-color" content="#090E12" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Voyage" />
     <link rel="apple-touch-icon" href="/app-voyage-safari/apple-touch-icon.png" />
     <link rel="manifest" href="/app-voyage-safari/manifest.json" />
+    <link rel="preload" href="/app-voyage-safari/fonts/BigShouldersDisplay_900Black.ttf" as="font" type="font/ttf" crossorigin />
+    <style id="fonts">
+@font-face{font-family:'Big Shoulders Display';font-weight:600;font-display:swap;src:url(/app-voyage-safari/fonts/BigShouldersDisplay_600SemiBold.ttf) format('truetype')}
+@font-face{font-family:'Big Shoulders Display';font-weight:700;font-display:swap;src:url(/app-voyage-safari/fonts/BigShouldersDisplay_700Bold.ttf) format('truetype')}
+@font-face{font-family:'Big Shoulders Display';font-weight:800;font-display:swap;src:url(/app-voyage-safari/fonts/BigShouldersDisplay_800ExtraBold.ttf) format('truetype')}
+@font-face{font-family:'Big Shoulders Display';font-weight:900;font-display:swap;src:url(/app-voyage-safari/fonts/BigShouldersDisplay_900Black.ttf) format('truetype')}
+@font-face{font-family:'JetBrains Mono';font-weight:500;font-display:swap;src:url(/app-voyage-safari/fonts/JetBrainsMono_500Medium.ttf) format('truetype')}
+@font-face{font-family:'JetBrains Mono';font-weight:700;font-display:swap;src:url(/app-voyage-safari/fonts/JetBrainsMono_700Bold.ttf) format('truetype')}
+@font-face{font-family:'JetBrains Mono';font-weight:800;font-display:swap;src:url(/app-voyage-safari/fonts/JetBrainsMono_800ExtraBold.ttf) format('truetype')}
+@font-face{font-family:'Schibsted Grotesk';font-weight:400;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_400Regular.ttf) format('truetype')}
+@font-face{font-family:'Schibsted Grotesk';font-weight:500;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_500Medium.ttf) format('truetype')}
+@font-face{font-family:'Schibsted Grotesk';font-weight:600;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_600SemiBold.ttf) format('truetype')}
+@font-face{font-family:'Schibsted Grotesk';font-weight:700;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_700Bold.ttf) format('truetype')}
+@font-face{font-family:'Schibsted Grotesk';font-weight:800;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_800ExtraBold.ttf) format('truetype')}
+    </style>
     <style id="expo-reset">
-      html, body { height: 100%; background: #060913; }
+      html, body { height: 100%; background: #090E12; }
       body { overflow: hidden; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
       #root { display: flex; height: 100%; flex: 1; }
+      :where(body, input, textarea) { font-family: 'Schibsted Grotesk', system-ui, sans-serif; }
       .leaflet-container { background: #0e1424; font-family: inherit; }
       .leaflet-control-attribution { background: rgba(6,9,19,.6) !important; color: #8c95b4 !important; font-size: 9px; }
       .leaflet-control-attribution a { color: #8c95b4 !important; }
@@ -23,6 +39,6 @@
   <body>
     <noscript>Active JavaScript pour utiliser Voyage.</noscript>
     <div id="root"></div>
-  <script src="/app-voyage-safari/_expo/static/js/web/entry-ba108ef118b1ad657f9caf692b80e46c.js" defer></script>
+  <script src="/app-voyage-safari/_expo/static/js/web/entry-e66b287ccec43b6f994dce947dab4827.js" defer></script>
 </body>
 </html>

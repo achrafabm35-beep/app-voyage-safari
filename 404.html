@@ -26,10 +26,27 @@
 @font-face{font-family:'Schibsted Grotesk';font-weight:700;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_700Bold.ttf) format('truetype')}
 @font-face{font-family:'Schibsted Grotesk';font-weight:800;font-display:swap;src:url(/app-voyage-safari/fonts/SchibstedGrotesk_800ExtraBold.ttf) format('truetype')}
     </style>
+    <script>
+      (function () {
+        function fit() {
+          var h = window.innerHeight;
+          if (navigator.standalone || matchMedia('(display-mode: standalone)').matches) {
+            var s = matchMedia('(orientation: portrait)').matches ? screen.height : screen.width;
+            if (s > h) h = s;
+          }
+          document.documentElement.style.setProperty('--app-h', h + 'px');
+        }
+        fit();
+        addEventListener('resize', fit);
+        addEventListener('orientationchange', function () { setTimeout(fit, 300); });
+      })();
+    </script>
     <style id="expo-reset">
-      html, body { height: 100%; background: #090E12; }
+      /* Home-screen mode on iPhone reports a height that is short by the status bar,
+         which left an empty band at the bottom. The script above sets --app-h to the real screen height. */
+      html, body { height: var(--app-h, 100%); min-height: 100%; background: #090E12; }
       body { overflow: hidden; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
-      #root { display: flex; height: 100%; flex: 1; }
+      #root { display: flex; height: var(--app-h, 100%); flex: 1; }
       :where(body, input, textarea) { font-family: 'Schibsted Grotesk', system-ui, sans-serif; }
       .leaflet-container { background: #0e1424; font-family: inherit; }
       .osm-dark { filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.88) saturate(0.55); }
